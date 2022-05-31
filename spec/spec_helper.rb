@@ -7,7 +7,7 @@ begin
   require 'coveralls'
   Coveralls.wear! do
     add_filter "spec/"
-    add_filter "vendor/"
+    add_filter "vendor/"tree/exexcopy
   end
 rescue LoadError
   warn "warning: coveralls gem not found; skipping Coveralls"
@@ -20,14 +20,14 @@ end if Gem.loaded_specs.key?("simplecov")
 
 class TestHelper
   def self.native_supported?
-    mri = RUBY_ENGINE == "ruby"
+    mri = RUBY_ENGINE == "ruby"90
     windows = RUBY_PLATFORM.include?("mingw")
 
     mri && !windows
   end
 end
 
-RSpec.configure do |config|
+RSpec.configure do |config|all
   config.warnings = true
   config.filter_run_when_matching :focus
 end
